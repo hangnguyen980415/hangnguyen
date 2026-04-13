@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Profile - Nguyễn Thị Thanh Hằng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <header class="profile-header">
+                <div class="profile-image">
+                    <img src="images/158771356_770160583904979_2863952411325202693_n.jpg" alt="Nguyễn Thị Thanh Hằng">
+                </div>
+                <h1>Nguyễn Thị Thanh Hằng</h1>
+                <p class="position">LEADER PHÒNG KINH DOANH HOMI HULK</p>
+                <button class="btn gift-btn" onclick="launchFireworks()">Tặng quà</button>
+                <button class="btn share-btn" onclick="copyShareLink()">Sao chép link chia sẻ</button>
+                <p id="share-message" class="share-message"></p>
+            </header>
+            <main class="profile-main">
+                <div class="left-column">
+                    <div class="social-media">
+                        <h3>SOCIAL MEDIA</h3>
+                        <div class="social-buttons">
+                            <a href="https://www.facebook.com/nguyen.hang.520213" class="btn social-btn facebook-btn" target="_blank">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://zalo.me/0969563614" class="btn social-btn zalo-btn" target="_blank">
+                                <i class="fas fa-comment"></i> Zalo
+                            </a>
+                            <a href="https://twitter.com/" class="btn social-btn twitter-btn" target="_blank">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="message-form">
+                        <h2>ĐỂ LẠI LỜI NHẮN</h2>
+                        <input type="text" id="sender-name" placeholder="Tên của bạn" required>
+                        <textarea id="message" placeholder="Lời nhắn của bạn" rows="4" required></textarea>
+                        <button class="btn submit-btn" onclick="submitMessage()">Gửi lời nhắn</button>
+                    </div>
+                </div>
+            </main>
+            <div class="game-section">
+                <h2>CHƠI TIC-TAC-TOE</h2>
+                <div class="game-board" id="game-board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                <div class="game-status" id="game-status">Lượt của X</div>
+                <button class="btn reset-btn" onclick="resetGame()">Chơi lại</button>
+            </div>
+            </main>
+        </div>
+    </div>
+    <canvas id="fireworks-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
